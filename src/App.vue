@@ -1,16 +1,19 @@
 <script>
 import Header from './components/Header.vue'
-import News from './components/pages/News.vue' // TODO: remove
+// TODO: remove
 import Footer from './components/Footer.vue'
 import AboutUs from './components/pages/AboutUs.vue'
 import Matches from './components/pages/Matches.vue'
+import Cartitem from './components/Footer.vue'
+import Cart from './components/Cart.vue'
 // hi y'all, going to number the changes (there are 4) so it's clear to you. 
 // 1. create a routes object with all your navbar routes
 // see https://vuejs.org/guide/scaling-up/routing.html#simple-routing-from-scratch
 const routes = {
-  '/': null,
+  '/': Home,
   '/news': News,
   '/about': AboutUs,
+  '/cart': Cart
 }
 export default {
   data() {
@@ -27,7 +30,11 @@ export default {
   components: {
     Header,
     News,
-    Footer
+    Footer,
+    AboutUs,
+    Matches,
+    CartItem,
+    Cart,
   }
 }
 </script>
