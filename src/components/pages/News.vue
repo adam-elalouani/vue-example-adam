@@ -79,8 +79,23 @@ export default {
         <div class="articleGrid">
             <NewsItem v-for="article in articles" :newsItem="article" :key="article.title" />
         </div>
+
+        <button @click="callingdata">call data</button>
     </div>
+
 </template>
+
+<script>
+import axios from 'axios';
+methods: {
+    callingdata(){
+        axios.get('https://fotmob-backend.onrender.com/articles').then(response => {
+               console.log(response.data); // do you want to do something else here? 
+               //what else do I do??? :(
+           }
+    }
+}
+</script>
 
 <style scoped>
 .WorldNewsHeader {
