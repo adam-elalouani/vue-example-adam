@@ -1,3 +1,12 @@
+<script>
+export default {
+    components: {
+        cartItem
+    
+    }
+  };
+</script>
+  
 <template>
     <div class="cart-item">
       <img :src="item.image" alt="Product Image" />
@@ -9,6 +18,7 @@
   </template>
   
   <script>
+
   export default {
     props: ['item'],
     methods: {

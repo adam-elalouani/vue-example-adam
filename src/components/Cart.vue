@@ -31,7 +31,7 @@
       }
     },
     components: {
-      CartItem
+   
     }
   };
   </script>

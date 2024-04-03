@@ -1,6 +1,8 @@
 <script>
 import Header from './components/Header.vue'
 // TODO: remove
+import Home from './components/pages/Home.vue'
+import News from './components/pages/News.vue'
 import Footer from './components/Footer.vue'
 import AboutUs from './components/pages/AboutUs.vue'
 import Matches from './components/pages/Matches.vue'
@@ -33,7 +35,7 @@ export default {
     Footer,
     AboutUs,
     Matches,
-    CartItem,
+    Cartitem,
     Cart,
   }
 }

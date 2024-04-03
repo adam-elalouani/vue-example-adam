@@ -2,6 +2,7 @@
 import NewsItem from "../widgets/NewsItem.vue";
 import NewsItemFooter from "../widgets/NewsItemFooter.vue";
 import TimeStamp from "../widgets/TimeStamp.vue";
+import axios from 'axios';
 export default {
     data() {
         return {
@@ -58,7 +59,16 @@ export default {
         NewsItem,
         TimeStamp, 
         NewsItemFooter
+    },
+    methods:{
+        callingdata(){
+        axios.get('https://fotmob-backend.onrender.com/articles').then(response => {
+               console.log(response.data); // do you want to do something else here? 
+               //what else do I do??? :(
+           })
+        }
     }
+
 }
 </script>
 
@@ -84,18 +94,6 @@ export default {
     </div>
 
 </template>
-
-<script>
-import axios from 'axios';
-methods: {
-    callingdata(){
-        axios.get('https://fotmob-backend.onrender.com/articles').then(response => {
-               console.log(response.data); // do you want to do something else here? 
-               //what else do I do??? :(
-           }
-    }
-}
-</script>
 
 <style scoped>
 .WorldNewsHeader {
